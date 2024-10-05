@@ -15,7 +15,7 @@ from laptop_project.data_access.laptop_data import LaptopData
 class DataIngestion:
     def __init__(self,data_ingestion_config:DataIngestionConfig=DataIngestionConfig()):
         """
-        :param data_ingestion_config: configuration for data ingestion
+        param data_ingestion_config: configuration for data ingestion
         """
         try:
             self.data_ingestion_config = data_ingestion_config
@@ -49,10 +49,13 @@ class DataIngestion:
             raise LaptopException(e,sys)
         
 
-    def split_data_as_train_test(self,dataframe: DataFrame) ->None:
+    def split_data_as_train_test(self, dataframe: DataFrame) ->None:
         """
         Method Name :   split_data_as_train_test
         Description :   This method splits the dataframe into train set and test set based on split ratio 
+
+        Input Parameters:
+        dataframe: dataframe to be split
         
         Output      :   Folder is created in s3 bucket
         On Failure  :   Write an exception log and then raise an exception

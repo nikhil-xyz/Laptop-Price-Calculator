@@ -1,0 +1,35 @@
+columns:
+  - Brand: category
+  - Screen_Size: float
+  - CPU_Model: category
+  - Ram: float
+  - Rating: float
+  - Graphics: category
+  - Disk_Size: float
+  - Price: float
+ 
+
+numerical_columns:
+  - Screen_Size
+  - Ram
+  - Rating
+  - Disk_Size
+  - Price
+
+categorical_columns:
+  - Brand
+  - CPU_Model
+  - Graphics
+
+drop_columns:
+  - Rating
+
+transform_columns:
+  - Disk_Size
+  - Screen_Size
+  - Ram
+
+oh_columns:
+  - Brand
+  - CPU_Model
+  - Graphics

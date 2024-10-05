@@ -12,11 +12,14 @@ ca = certifi.where()
 
 class MongoDBClient:
     """
-    Class Name :   export_data_into_feature_store
-    Description :   This method exports the dataframe from mongodb feature store as dataframe 
+    Class Name      :   export_data_into_feature_store
+    Description     :   This method exports the dataframe from mongodb feature store as dataframe 
+
+    parameters      : 
+    database_name   :   Name of the database to connect to.
     
-    Output      :   connection to mongodb database
-    On Failure  :   raises an exception
+    Output          :   connection to mongodb database
+    On Failure      :   raises an exception
     """
     client = None
 
