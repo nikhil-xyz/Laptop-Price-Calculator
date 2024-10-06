@@ -57,7 +57,7 @@ class DataValidation:
         Description :   This method validates the existence of a numerical and categorical columns
 
         Arguments   :
-        dataframe   : DataFrame to be validated
+        dataframe   :   DataFrame to be validated
         
         Output      :   Returns bool value based on validation results
         On Failure  :   Write an exception log and then raise an exception
@@ -92,7 +92,7 @@ class DataValidation:
         Description :   This method reads data from a CSV file
 
         Arguments   :
-        file_path   : Path of the CSV file
+        file_path   :   Path of the CSV file
         
         Output      :   Returns DataFrame
         On Failure  :   Write an exception log and then raise an exception

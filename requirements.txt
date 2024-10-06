@@ -2,7 +2,7 @@ numpy
 pandas
 scikit-learn
 matplotlib
-evidently==0.2.8
+evidently
 pymongo
 xgboost
 catboost

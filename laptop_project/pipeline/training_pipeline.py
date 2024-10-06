@@ -4,17 +4,19 @@ from laptop_project.logger import logging
 
 from laptop_project.components.data_ingestion import DataIngestion
 from laptop_project.components.data_validation import DataValidation
+from laptop_project.components.data_transformation import DataTransformation
 
 from laptop_project.entity.config_entity import (DataIngestionConfig,
                                                 DataValidationConfig,
-                                                # DataTransformationConfig,
+                                                DataTransformationConfig,
                                                 # ModelTrainerConfig,
                                                 # ModelEvaluationConfig,
                                                 # ModelPusherConfig
                                                 )
 
 from laptop_project.entity.artifact_entity import (DataIngestionArtifact,
-                                                DataValidationArtifact)
+                                                DataValidationArtifact,
+                                                DataTransformationArtifact)
                                                 
 
 
@@ -23,7 +25,7 @@ class TrainPipeline:
     def __init__(self):
         self.data_ingestion_config = DataIngestionConfig()
         self.data_validation_config = DataValidationConfig()
-        # self.data_transformation_config = DataTransformationConfig()
+        self.data_transformation_config = DataTransformationConfig()
         # self.model_trainer_config = ModelTrainerConfig()
         # self.model_evaluation_config = ModelEvaluationConfig()
         # self.model_pusher_config = ModelPusherConfig()
@@ -70,6 +72,21 @@ class TrainPipeline:
 
 
 
+    def start_data_transformation(self, data_ingestion_artifact: DataIngestionArtifact, data_validation_artifact: DataValidationArtifact) -> DataTransformationArtifact:
+        """
+        This method of TrainPipeline class is responsible for starting data transformation component
+        """
+        try:
+            data_transformation = DataTransformation(data_ingestion_artifact=data_ingestion_artifact,
+                                                     data_transformation_config=self.data_transformation_config,
+                                                     data_validation_artifact=data_validation_artifact)
+            data_transformation_artifact = data_transformation.initiate_data_transformation()
+            return data_transformation_artifact
+        except Exception as e:
+            raise LaptopException(e, sys)
+
+
+
     def run_pipeline(self, ) -> None:
         """
         This method of TrainPipeline class is responsible for running complete pipeline
@@ -77,8 +94,8 @@ class TrainPipeline:
         try:
             data_ingestion_artifact = self.start_data_ingestion()
             data_validation_artifact = self.start_data_validation(data_ingestion_artifact=data_ingestion_artifact)
-            # data_transformation_artifact = self.start_data_transformation(
-            #     data_ingestion_artifact=data_ingestion_artifact, data_validation_artifact=data_validation_artifact)
+            data_transformation_artifact = self.start_data_transformation(
+                data_ingestion_artifact=data_ingestion_artifact, data_validation_artifact=data_validation_artifact)
             # model_trainer_artifact = self.start_model_trainer(data_transformation_artifact=data_transformation_artifact)
             # model_evaluation_artifact = self.start_model_evaluation(data_ingestion_artifact=data_ingestion_artifact,
             #                                                         model_trainer_artifact=model_trainer_artifact)

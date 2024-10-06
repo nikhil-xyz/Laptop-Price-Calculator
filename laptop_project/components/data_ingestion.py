@@ -55,10 +55,7 @@ class DataIngestion:
         Description :   This method splits the dataframe into train set and test set based on split ratio 
 
         Input Parameters:
-        dataframe: dataframe to be split
-        
-        Output      :   Folder is created in s3 bucket
-        On Failure  :   Write an exception log and then raise an exception
+        dataframe   :   dataframe to be split
         """
         logging.info("Entered split_data_as_train_test method of Data_Ingestion class")
 
@@ -106,7 +103,7 @@ class DataIngestion:
             )
 
             data_ingestion_artifact = DataIngestionArtifact(trained_file_path=self.data_ingestion_config.training_file_path,
-            test_file_path=self.data_ingestion_config.testing_file_path)
+                                        test_file_path=self.data_ingestion_config.testing_file_path)
             
             logging.info(f"Data ingestion artifact: {data_ingestion_artifact}")
             return data_ingestion_artifact

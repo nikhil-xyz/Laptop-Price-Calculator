@@ -60,3 +60,25 @@ class DataValidationConfig:
     drift_report_file_path_html: str = os.path.join(data_validation_dir, DATA_VALIDATION_DRIFT_REPORT_DIR,
                                                DATA_VALIDATION_DRIFT_REPORT_FILE_NAME_HTML)
     
+
+
+@dataclass
+class DataTransformationConfig:
+    """
+    Configures the data transformation process.
+    
+    Attributes:
+    data_transformation_dir (str)      : Directory to store the data transformation artifacts.
+    transformed_train_file_path (str)  : Path to the transformed training file containing the preprocessed data.
+    transformed_test_file_path (str)   : Path to the transformed test file containing the preprocessed data.
+    transformed_object_file_path (str) : Path to the object file containing the preprocessing transformations.
+    """
+    data_transformation_dir: str = os.path.join(training_pipeline_config.artifact_dir, DATA_TRANSFORMATION_DIR_NAME)
+    transformed_train_file_path: str = os.path.join(data_transformation_dir, DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,
+                                                    TRAIN_FILE_NAME.replace("csv", "npy"))
+    transformed_test_file_path: str = os.path.join(data_transformation_dir, DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,
+                                                   TEST_FILE_NAME.replace("csv", "npy"))
+    transformed_object_file_path: str = os.path.join(data_transformation_dir,
+                                                     DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR,
+                                                     PREPROCSSING_OBJECT_FILE_NAME)
+    

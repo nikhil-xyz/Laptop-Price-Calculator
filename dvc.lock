@@ -1,0 +1,29 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python laptop_project/pipeline/data_ingestion_pipeline.py
+    deps:
+    - path: laptop_project/pipeline/data_ingestion_pipeline.py
+      hash: md5
+      md5: 266c1a749654f9a80a0a0222f428aa3d
+      size: 1474
+    outs:
+    - path: artifact
+      hash: md5
+      md5: e085e35396bd9534b72853317b55ae8c.dir
+      size: 144527
+      nfiles: 3
+  data_validation:
+    cmd: python laptop_project/pipeline/data_validation_pipeline.py
+    deps:
+    - path: laptop_project/pipeline/data_validation_pipeline.py
+      hash: md5
+      md5: ac6518341faf06fc6b5518c46f5084eb
+      size: 2126
+  data_transformation:
+    cmd: python laptop_project/pipeline/data_transformation_pipeline.py
+    deps:
+    - path: laptop_project/pipeline/data_transformation_pipeline.py
+      hash: md5
+      md5: 9dc0f6e3513ceff2e05d1b1a40eb2816
+      size: 2565
