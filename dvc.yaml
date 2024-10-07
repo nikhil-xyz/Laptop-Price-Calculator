@@ -4,21 +4,27 @@ stages:
     deps:
       - laptop_project/pipeline/data_ingestion_pipeline.py
     outs:
-      - artifact
+      - artifact/data_ingestion/feature_store/laptop.csv
+      - artifact/data_ingestion/ingested/train.csv
+      - artifact/data_ingestion/ingested/test.csv
 
 
   data_validation:
     cmd: python laptop_project/pipeline/data_validation_pipeline.py
     deps:
       - laptop_project/pipeline/data_validation_pipeline.py
-    # outs:
+    outs:
+      - artifact/data_validation/drift_report/report.yaml
       
 
   data_transformation:
     cmd: python laptop_project/pipeline/data_transformation_pipeline.py
     deps:
-    - laptop_project/pipeline/data_transformation_pipeline.py
-    # outs:-
+      - laptop_project/pipeline/data_transformation_pipeline.py
+    outs:
+      - artifact/data_transformation/transformed/train.npy
+      - artifact/data_transformation/transformed/test.npy
+      - artifact/data_transformation/transformed_object/preprocessing.pkl
 
   # training:
   #   cmd: python src/cnnClassifier/pipeline/stage_03_model_trainer.py

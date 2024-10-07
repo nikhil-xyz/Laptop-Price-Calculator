@@ -16,7 +16,8 @@ class TrainingPipelineConfig:
     timestamp (str)     : Timestamp for the training pipeline. Will play role in the artifact naming.
     """
     pipeline_name: str = PIPELINE_NAME
-    artifact_dir: str = os.path.join(ARTIFACT_DIR, TIMESTAMP)
+    artifact_dir: str = os.path.join(ARTIFACT_DIR)
+    # artifact_dir: str = os.path.join(ARTIFACT_DIR, TIMESTAMP) for the version control
     timestamp: str = TIMESTAMP
 
 

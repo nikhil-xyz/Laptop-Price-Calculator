@@ -8,11 +8,18 @@ stages:
       md5: 266c1a749654f9a80a0a0222f428aa3d
       size: 1474
     outs:
-    - path: artifact
+    - path: artifact/data_ingestion/feature_store/laptop.csv
       hash: md5
-      md5: e085e35396bd9534b72853317b55ae8c.dir
-      size: 144527
-      nfiles: 3
+      md5: ee61af103a9aa7d9626393efd6be8f1b
+      size: 72231
+    - path: artifact/data_ingestion/ingested/test.csv
+      hash: md5
+      md5: e89bd015ff54e067c456bfdfcf40bdea
+      size: 14592
+    - path: artifact/data_ingestion/ingested/train.csv
+      hash: md5
+      md5: 3a2213844d7fea8493c638da98c21ff6
+      size: 57704
   data_validation:
     cmd: python laptop_project/pipeline/data_validation_pipeline.py
     deps:
@@ -20,6 +27,11 @@ stages:
       hash: md5
       md5: ac6518341faf06fc6b5518c46f5084eb
       size: 2126
+    outs:
+    - path: artifact/data_validation/drift_report/report.yaml
+      hash: md5
+      md5: c911be6cd2c127cb77febfe8708cd8b2
+      size: 10323
   data_transformation:
     cmd: python laptop_project/pipeline/data_transformation_pipeline.py
     deps:
@@ -27,3 +39,16 @@ stages:
       hash: md5
       md5: 9dc0f6e3513ceff2e05d1b1a40eb2816
       size: 2565
+    outs:
+    - path: artifact/data_transformation/transformed/test.npy
+      hash: md5
+      md5: 53fb1e792c6e689e8986d05625d7094f
+      size: 86528
+    - path: artifact/data_transformation/transformed/train.npy
+      hash: md5
+      md5: d520c4ca7ae1d4018b779826c898e9cf
+      size: 345152
+    - path: artifact/data_transformation/transformed_object/preprocessing.pkl
+      hash: md5
+      md5: 7a06c6d6abd2712104883664adcc401f
+      size: 2844
