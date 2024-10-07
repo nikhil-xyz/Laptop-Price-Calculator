@@ -5,6 +5,7 @@ from laptop_project.exception import LaptopException
 from laptop_project.pipeline.data_ingestion_pipeline import DataIngestionPipeline 
 from laptop_project.pipeline.data_validation_pipeline import DataValidationPipeline
 from laptop_project.pipeline.data_transformation_pipeline import DataTransformationPipeline
+from laptop_project.pipeline.model_trainer_pipeline import ModelTrainerPipeline
 
 def run_pipeline():
         """
@@ -20,6 +21,9 @@ def run_pipeline():
             transformation = DataTransformationPipeline()
             data_transformation_artifact = transformation.main(
                 data_ingestion_artifact=data_ingestion_artifact, data_validation_artifact=data_validation_artifact)
+
+            trainer = ModelTrainerPipeline()
+            model_trainer_artifact = trainer.main(data_transformation_artifact=data_transformation_artifact)
 
             # data_validation_artifact = self.start_data_validation(data_ingestion_artifact=data_ingestion_artifact)
             # data_transformation_artifact = self.start_data_transformation(

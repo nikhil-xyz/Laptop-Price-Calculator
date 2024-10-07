@@ -26,6 +26,13 @@ stages:
       - artifact/data_transformation/transformed/test.npy
       - artifact/data_transformation/transformed_object/preprocessing.pkl
 
+  model_training:
+    cmd: python laptop_project/pipeline/model_trainer_pipeline.py
+    deps:
+      - laptop_project/pipeline/model_trainer_pipeline.py
+    outs:
+      - artifact/model_trainer/trained_model/model.pkl
+
   # training:
   #   cmd: python src/cnnClassifier/pipeline/stage_03_model_trainer.py
   #   deps:

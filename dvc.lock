@@ -52,3 +52,15 @@ stages:
       hash: md5
       md5: 7a06c6d6abd2712104883664adcc401f
       size: 2844
+  model_training:
+    cmd: python laptop_project/pipeline/model_trainer_pipeline.py
+    deps:
+    - path: laptop_project/pipeline/model_trainer_pipeline.py
+      hash: md5
+      md5: aaac2b3e2471b46bf16dfacf1ed26c27
+      size: 2847
+    outs:
+    - path: artifact/model_trainer/trained_model/model.pkl
+      hash: md5
+      md5: be1033b344748d0769f7f569de40816e
+      size: 43778

@@ -82,4 +82,20 @@ class DataTransformationConfig:
     transformed_object_file_path: str = os.path.join(data_transformation_dir,
                                                      DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR,
                                                      PREPROCSSING_OBJECT_FILE_NAME)
+
+
+@dataclass
+class ModelTrainerConfig:
+    """
+    Configures the model training process.
+    
+    Attributes:
+    model_trainer_dir (str)       : Directory to store the model training artifacts.
+    trained_model_file_path (str) : Path to the trained model file containing the trained model.
+    """
+    model_trainer_dir: str = os.path.join(training_pipeline_config.artifact_dir, MODEL_TRAINER_DIR_NAME)
+    trained_model_file_path: str = os.path.join(model_trainer_dir, MODEL_TRAINER_TRAINED_MODEL_DIR, MODEL_FILE_NAME)
+    # expected_r2_score: float = MODEL_TRAINER_EXPECTED_SCORE
+    # model_config_file_path: str = MODEL_TRAINER_MODEL_CONFIG_FILE_PATH
+
     

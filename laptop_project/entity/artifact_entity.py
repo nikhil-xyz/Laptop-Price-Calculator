@@ -28,3 +28,22 @@ class DataTransformationArtifact:
     transformed_object_file_path:str 
     transformed_train_file_path:str
     transformed_test_file_path:str
+
+
+@dataclass
+class RegressionMetricArtifact:
+    """
+    Contains regression metric scores.
+    """
+    r2_score:float
+    mse_score:float
+    mae_score:float
+
+
+@dataclass
+class ModelTrainerArtifact:
+    """
+    Contains file paths for trained model and metric report.
+    """
+    trained_model_file_path:str 
+    metric_artifact:RegressionMetricArtifact
