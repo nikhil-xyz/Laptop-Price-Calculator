@@ -119,7 +119,7 @@ class DataValidation:
         try:
             laptop_data_drift_dashboard = Dashboard(tabs=[DataDriftTab()])
             laptop_data_drift_dashboard.calculate(reference_df, current_df)
-            laptop_data_drift_dashboard.save('report.html')
+            laptop_data_drift_dashboard.save('data_drift_report.html')
 
             
             data_drift_profile = Profile(sections=[DataDriftProfileSection()])
