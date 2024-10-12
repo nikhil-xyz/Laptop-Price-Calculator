@@ -1,24 +1,25 @@
 from laptop_project.cloud_storage.aws_storage import SimpleStorageService
-from laptop_project.exception import USvisaException
+from laptop_project.exception import LaptopException
 from laptop_project.entity.estimator import LaptopModel
 import sys
 from pandas import DataFrame
 
 
-class USvisaEstimator:
+class LaptopEstimator:
     """
     This class is used to save and retrieve us_visas model in s3 bucket and to do prediction
     """
 
     def __init__(self,bucket_name,model_path,):
         """
-        :param bucket_name: Name of your model bucket
-        :param model_path: Location of your model in bucket
+        Args:
+        bucket_name : Name of your model bucket
+        model_path  : Location of your model in bucket
         """
         self.bucket_name = bucket_name
         self.s3 = SimpleStorageService()
         self.model_path = model_path
-        self.loaded_model:USvisaModel=None
+        self.loaded_model:LaptopModel=None
 
 
     def is_model_present(self,model_path):

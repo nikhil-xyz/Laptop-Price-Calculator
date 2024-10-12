@@ -18,5 +18,6 @@ dill
 typing
 boto3
 dagshub
+mypy-boto3-s3
 
 -e .

@@ -43,7 +43,7 @@ class RegressionMetricArtifact:
 @dataclass
 class ModelTrainerArtifact:
     """
-    Contains file paths for trained model and metric report.
+    Contains file paths for trained model.
     """
     trained_model_file_path:str 
     # metric_artifact:RegressionMetricArtifact
@@ -52,9 +52,18 @@ class ModelTrainerArtifact:
 @dataclass
 class ModelEvaluationArtifact:
     """
-    Contains evaluation metrics and model acceptance status.
+    Contains file paths for trained model.
     """
     # is_model_accepted:bool
     # changed_accuracy:float
     # s3_model_path:str 
     trained_model_path:str
+
+
+@dataclass
+class ModelPusherArtifact:
+    """
+    Contains file paths for pushed model and s3 bucket name.
+    """
+    bucket_name:str
+    s3_model_path:str

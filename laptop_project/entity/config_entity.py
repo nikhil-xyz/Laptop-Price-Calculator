@@ -111,4 +111,17 @@ class ModelEvaluationConfig:
     model_trainer_dir: str = os.path.join(training_pipeline_config.artifact_dir, MODEL_TRAINER_DIR_NAME)
     trained_model_file_path: str = os.path.join(model_trainer_dir, MODEL_TRAINER_TRAINED_MODEL_DIR, MODEL_FILE_NAME)
 
+
+
+@dataclass
+class ModelPusherConfig:
+    """
+    Configures the model pusher process.
+    
+    Attributes:
+    model_pusher_dir (str)       : Directory to store the model pusher artifacts.
+    """
+    bucket_name: str = MODEL_BUCKET_NAME
+    s3_model_key_path: str = MODEL_FILE_NAME
+
     
