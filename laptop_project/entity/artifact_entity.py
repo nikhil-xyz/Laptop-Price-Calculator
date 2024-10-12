@@ -46,4 +46,15 @@ class ModelTrainerArtifact:
     Contains file paths for trained model and metric report.
     """
     trained_model_file_path:str 
-    metric_artifact:RegressionMetricArtifact
+    # metric_artifact:RegressionMetricArtifact
+
+
+@dataclass
+class ModelEvaluationArtifact:
+    """
+    Contains evaluation metrics and model acceptance status.
+    """
+    # is_model_accepted:bool
+    # changed_accuracy:float
+    # s3_model_path:str 
+    trained_model_path:str

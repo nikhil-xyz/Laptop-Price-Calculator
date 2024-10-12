@@ -64,3 +64,10 @@ stages:
       hash: md5
       md5: be1033b344748d0769f7f569de40816e
       size: 43778
+  model_evaluation:
+    cmd: python laptop_project/pipeline/model_evaluation_pipeline.py
+    deps:
+    - path: laptop_project/pipeline/model_evaluation_pipeline.py
+      hash: md5
+      md5: 321fb094c2b1352359194a23efd536ac
+      size: 3670

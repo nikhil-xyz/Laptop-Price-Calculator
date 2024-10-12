@@ -48,14 +48,15 @@ class ModelTrainer:
             
             model_obj.fit(x_train, y_train)  # Train the model on the training data
     
-            y_pred = model_obj.predict(x_test)
+            # y_pred = model_obj.predict(x_test)
             
-            r2 = r2_score(y_test, y_pred) 
-            mse = mean_squared_error(y_test, y_pred)  
-            mae = mean_absolute_error(y_test, y_pred)  
-            metric_artifact = RegressionMetricArtifact(r2_score=r2, mae_score=mae, mse_score=mse)
+            # r2 = r2_score(y_test, y_pred) 
+            # mse = mean_squared_error(y_test, y_pred)  
+            # mae = mean_absolute_error(y_test, y_pred)  
+            # metric_artifact = RegressionMetricArtifact(r2_score=r2, mae_score=mae, mse_score=mse)
             
-            return model_obj, metric_artifact
+            # return model_obj, metric_artifact
+            return model_obj
         
         except Exception as e:
             raise LaptopException(e, sys) from e
@@ -74,19 +75,20 @@ class ModelTrainer:
             train_arr = load_numpy_array_data(file_path=self.data_transformation_artifact.transformed_train_file_path)
             test_arr = load_numpy_array_data(file_path=self.data_transformation_artifact.transformed_test_file_path)
             
-            model_object ,metric_artifact = self.get_model_object_and_report(train=train_arr, test=test_arr)
+            # model_object ,metric_artifact = self.get_model_object_and_report(train=train_arr, test=test_arr)
+            model_object = self.get_model_object_and_report(train=train_arr, test=test_arr)
             
             preprocessing_obj = load_object(file_path=self.data_transformation_artifact.transformed_object_file_path)
 
-            laptop_model = LaptopModel(preprocessing_object=preprocessing_obj,
-                                       trained_model_object=model_object)
+            laptop_model = LaptopModel(preprocessing_object = preprocessing_obj,
+                                       trained_model_object = model_object)
             logging.info("Created laptop model object with preprocessor and model")
           
             save_object(self.model_trainer_config.trained_model_file_path, laptop_model)
 
             model_trainer_artifact = ModelTrainerArtifact(
                 trained_model_file_path=self.model_trainer_config.trained_model_file_path,
-                metric_artifact=metric_artifact,
+                # metric_artifact=metric_artifact,
             )
             logging.info(f"Model trainer artifact: {model_trainer_artifact}")
             return model_trainer_artifact

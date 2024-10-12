@@ -33,6 +33,13 @@ stages:
     outs:
       - artifact/model_trainer/trained_model/model.pkl
 
+  model_evaluation:
+    cmd: python laptop_project/pipeline/model_evaluation_pipeline.py
+    deps:
+    - laptop_project/pipeline/model_evaluation_pipeline.py
+    # outs:
+    #   - artifact/model_evaluation/evaluation_report.json
+
   # training:
   #   cmd: python src/cnnClassifier/pipeline/stage_03_model_trainer.py
   #   deps:

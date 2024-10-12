@@ -6,6 +6,7 @@ from laptop_project.pipeline.data_ingestion_pipeline import DataIngestionPipelin
 from laptop_project.pipeline.data_validation_pipeline import DataValidationPipeline
 from laptop_project.pipeline.data_transformation_pipeline import DataTransformationPipeline
 from laptop_project.pipeline.model_trainer_pipeline import ModelTrainerPipeline
+from laptop_project.pipeline.model_evaluation_pipeline import ModelEvaluationPipeline
 
 def run_pipeline():
         """
@@ -24,6 +25,10 @@ def run_pipeline():
 
             trainer = ModelTrainerPipeline()
             model_trainer_artifact = trainer.main(data_transformation_artifact=data_transformation_artifact)
+
+            evaluation = ModelEvaluationPipeline()
+            model_evaluation_artifact = evaluation.main(data_ingestion_artifact=data_ingestion_artifact,
+                                                      model_trainer_artifact=model_trainer_artifact)
 
             # data_validation_artifact = self.start_data_validation(data_ingestion_artifact=data_ingestion_artifact)
             # data_transformation_artifact = self.start_data_transformation(
