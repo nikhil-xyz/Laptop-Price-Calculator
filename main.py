@@ -34,17 +34,6 @@ def run_pipeline():
             pusher = ModelPusherPipeline()
             model_pusher_artifact = pusher.main(model_evaluation_artifact=model_evaluation_artifact)
 
-            # data_validation_artifact = self.start_data_validation(data_ingestion_artifact=data_ingestion_artifact)
-            # data_transformation_artifact = self.start_data_transformation(
-            #     data_ingestion_artifact=data_ingestion_artifact, data_validation_artifact=data_validation_artifact)
-            # model_trainer_artifact = self.start_model_trainer(data_transformation_artifact=data_transformation_artifact)
-            # model_evaluation_artifact = self.start_model_evaluation(data_ingestion_artifact=data_ingestion_artifact,
-            #                                                         model_trainer_artifact=model_trainer_artifact)
-            
-            # if not model_evaluation_artifact.is_model_accepted:
-            #     logging.info(f"Model not accepted.")
-            #     return None
-            # model_pusher_artifact = self.start_model_pusher(model_evaluation_artifact=model_evaluation_artifact)
 
         except Exception as e:
             raise LaptopException(e, sys)

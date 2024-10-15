@@ -96,6 +96,27 @@ with mlflow.start_run():
 ## Experiment Tracking 
 project_mlflow_uri = https://dagshub.com/nikhil.sonkusare94/Laptop-Price-Calculator
 
+## DVC Tracking
+DVC (Data Version Control) pipelines are a series of data processing stages that produce a final result, such as a trained machine learning model. DVC pipelines are defined in a dvc.yaml file using a YAML-based syntax. Each stage in the pipeline is defined as a separate entry with properties like cmd, deps, outs, etc.
+### Syntax 
+```
+stages:  
+<stage_name>:
+    cmd: <command_to_run>
+    deps:
+      - <dependency_file_or_directory>
+      - <another_dependency>
+    outs:
+      - <output_file_or_directory>
+      - <another_output>    
+    params:
+      - <params_file.yaml:param_name>
+      - <another_param_file:another_param>
+    metrics:     
+      - <metrics_file.json:metric_name>
+      - <another_metrics_file:another_metric>
+```
+
 
 ## AWS CI-CD Setup with Github Actions
 1. Login to AWS Console
