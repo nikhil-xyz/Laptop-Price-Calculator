@@ -69,5 +69,12 @@ stages:
     deps:
     - path: laptop_project/pipeline/model_evaluation_pipeline.py
       hash: md5
-      md5: 321fb094c2b1352359194a23efd536ac
-      size: 3670
+      md5: f229ce15c0fecbab36bf2f33591a1779
+      size: 3425
+  model_pusher:
+    cmd: python laptop_project/pipeline/model_pusher_pipeline.py
+    deps:
+    - path: laptop_project/pipeline/model_pusher_pipeline.py
+      hash: md5
+      md5: 6778ce4988b45d7973345d75847b45d7
+      size: 3787

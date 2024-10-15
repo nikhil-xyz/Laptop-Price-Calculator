@@ -5,7 +5,7 @@ from laptop_project.logger import logging
 from laptop_project.pipeline.data_ingestion_pipeline import DataIngestionPipeline
 from laptop_project.pipeline.data_validation_pipeline import DataValidationPipeline
 from laptop_project.pipeline.data_transformation_pipeline import DataTransformationPipeline
-from laptop_project.pipeline.model_trainer_pipeline import ModelTrainer
+from laptop_project.pipeline.model_trainer_pipeline import ModelTrainerPipeline
 from laptop_project.pipeline.model_evaluation_pipeline import ModelEvaluationPipeline
 
 

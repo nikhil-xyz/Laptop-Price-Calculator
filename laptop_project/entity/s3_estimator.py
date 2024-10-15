@@ -10,7 +10,7 @@ class LaptopEstimator:
     This class is used to save and retrieve us_visas model in s3 bucket and to do prediction
     """
 
-    def __init__(self,bucket_name,model_path,):
+    def __init__(self, bucket_name, model_path):
         """
         Args:
         bucket_name : Name of your model bucket

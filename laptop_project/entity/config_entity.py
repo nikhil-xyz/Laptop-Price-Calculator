@@ -124,4 +124,18 @@ class ModelPusherConfig:
     bucket_name: str = MODEL_BUCKET_NAME
     s3_model_key_path: str = MODEL_FILE_NAME
 
+
+
+@dataclass
+class LaptopPredictorConfig:
+    """
+    Configures the laptop predictor process.
+    
+    Attributes:
+    model_file_path (str)         : Path to the trained model file containing the trained model.
+    model_bucket_name (str)       : Name of the S3 bucket containing the model file.
+    """
+    model_file_path: str = MODEL_FILE_NAME
+    model_bucket_name: str = MODEL_BUCKET_NAME
+
     

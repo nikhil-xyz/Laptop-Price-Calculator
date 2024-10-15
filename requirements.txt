@@ -19,5 +19,9 @@ typing
 boto3
 dagshub
 mypy-boto3-s3
+fastapi
+uvicorn
+jinja2
+python-multipart
 
 -e .
