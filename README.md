@@ -1,6 +1,6 @@
 # Laptop-Price-Calculator
 
-##Tools
+## Tools
 - Anaconda: https://www.anaconda.com/
 - Vs code: https://code.visualstudio.com/download
 - Git: https://git-scm.com/
@@ -14,10 +14,13 @@
 - Data link: https://raw.githubusercontent.com/nikhil-xyz/datasets/refs/heads/main/laptop_uncleaned.csv
 
 
-##Git Commands
+## Git Commands
 git add .
+
 git commit -m "message"
+
 git push origin main
+
 
 
 
