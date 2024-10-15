@@ -10,3 +10,5 @@ with mlflow.start_run():
 
 
 uri = 'https://dagshub.com/nikhil.sonkusare94/Laptop-Price-Calculator'
+
+ecr : 423895530294.dkr.ecr.eu-north-1.amazonaws.com/laptop
