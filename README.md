@@ -15,6 +15,9 @@ Laptop price prediction utilizes machine learning to forecast the price of a lap
 - MongoDB: https://account.mongodb.com/account/login
 - Data link: https://raw.githubusercontent.com/nikhil-xyz/datasets/refs/heads/main/laptop_uncleaned.csv
 
+## Project Flowchart
+![image](flowchart\project_flowchart.png)
+
 
 ## Git Commands
 ```
@@ -115,6 +118,10 @@ stages:
     metrics:     
       - <metrics_file.json:metric_name>
       - <another_metrics_file:another_metric>
+```
+### DVC command for pipeline execution
+```
+dvc repro
 ```
 
 
