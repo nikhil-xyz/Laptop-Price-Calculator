@@ -16,7 +16,7 @@ Laptop price prediction utilizes machine learning to forecast the price of a lap
 - Data link: https://raw.githubusercontent.com/nikhil-xyz/datasets/refs/heads/main/laptop_uncleaned.csv
 
 ## Project Flowchart
-![image](flowchart\project_flowchart.png)
+![Alt text](flowchart\project_flowchart.png)
 
 
 ## Git Commands
