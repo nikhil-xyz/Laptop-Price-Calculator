@@ -153,6 +153,15 @@ newgrp docker
 7. Setup github secrets
 
 
+## Training Link:
+```
+https://13.51.168.189:8085/train
+```
+## Production Link:
+```
+https://13.51.168.189:8085/
+```
+
 
 
 <!-- ecr : 423895530294.dkr.ecr.eu-north-1.amazonaws.com/laptop -->
