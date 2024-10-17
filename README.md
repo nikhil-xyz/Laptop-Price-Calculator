@@ -155,11 +155,11 @@ newgrp docker
 
 ## Training Link:
 ```
-https://13.51.168.189:8080/train
+https://13.60.196.74:8080/train
 ```
 ## Production Link:
 ```
-https://13.51.168.189:8080/
+https://13.60.196.74:8080/
 ```
 
 
