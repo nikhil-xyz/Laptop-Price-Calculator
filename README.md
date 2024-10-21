@@ -83,6 +83,13 @@ rec = collection.insert_many(data)
 records = collection.find()
 ```
 
+## Evidently
+Evidently AI is an open-source Python library used for machine learning model monitoring and data drift detection. It helps to analyze and understand the behavior of machine learning models. It provides interactive reports and dashboards to visualize data and model metrics, such as data drift, model performance, and feature importance. It also allows you to create test suites to check data and model quality, and it can be integrated into ML pipelines.
+
+![drift](flowchart\drift.png)
+
+
+
 ## Dagshub
 DagsHub is a platform built for data scientists and machine learning engineers to build, manage, and collaborate on machine learning projects. It provides a central hub to version data, track experiments, and share findings, streamlining the development process.
 ### Syntax
