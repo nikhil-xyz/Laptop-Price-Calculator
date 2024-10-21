@@ -8,26 +8,26 @@ Laptop price prediction utilizes machine learning to forecast the price of a lap
 
 This project aims to develop a machine learning model for predicting laptop prices based on features like brand, CPU, screen size, RAM, graphics, and disk size. The project involves the following key steps:
 
-### Virtual Environment with Docker: 
-A Docker image was created to encapsulate all the project dependencies, libraries, and configurations, ensuring consistent execution across different environments. This approach simplifies setup and eliminates potential compatibility issues.
-### Data Collection and Preprocessing: 
+**Virtual Environment with Docker:** A Docker image was created to encapsulate all the project dependencies, libraries, and configurations, ensuring consistent execution across different environments. This approach simplifies setup and eliminates potential compatibility issues.
+
+**Data Collection and Preprocessing:** 
 Data was collected, cleaned, and preprocessed to handle missing values, outliers, and inconsistencies. Numerical features (screen size, RAM, disk size) were transformed using the Yeo-Johnson method to make their distributions more Gaussian-like. Categorical features (brand, CPU model, graphics) were one-hot encoded for model compatibility.
-### Exploratory Data Analysis (EDA): 
-EDA was conducted to gain insights into the data, identify relationships between variables, and inform feature engineering decisions. Correlation analysis, hypothesis testing (ANOVA and Pearson's), and visualizations like heatmaps and box plots were used. Also, **Evidently AI** were used for the data drift detection.
-### Feature Engineering: 
-New features were created, and existing ones were transformed to improve model accuracy. For example, less frequent laptop brands were grouped into an 'other' category, and numerical features were scaled using PowerTransformer and StandardScaler to improve model performance.
-### Model Selection and Training: 
-Various regression models were evaluated, including Decision Tree, Random Forest, Gradient Boosting, Linear Regression, XGBoost, CatBoost, AdaBoost, Ridge, Lasso, and KNN Regressor. CatBoost was identified as the best-performing model based on R2 score and other evaluation metrics.
-### Hyperparameter Tuning: 
-RandomizedSearchCV was used to fine-tune the hyperparameters of the selected models (CatBoost, XGBoost, Gradient Boosting, Ridge, Lasso) to further enhance performance. 
-### Model Evaluation: 
-The final model's performance was assessed using metrics such as R2 score, Mean Absolute Error (MAE), and Root Mean Squared Error (RMSE) on a held-out test set. Here, parameter tuning continued inside the modular coding with **MLFLOW** leading to identifying the best performing model (in this case, CatBoostRegressor) and retraining the model.
-### Data Storage: 
-The cleaned dataset from notebook experiments was stored in a MongoDB database for persistence and potential future use. The final trained model was stored in an **AWS S3 bucket** for deployment. This enables efficient access and integration with other applications or services.
-### CI/CD with GitHub Actions: 
-A CI/CD pipeline was implemented using **GitHub Actions** to automate the build, testing, and deployment processes. This ensures code quality, facilitates collaboration, and enables continuous integration of new features and updates.
-### User Interface with Flask: 
-A user-friendly interface was developed using Flask to facilitate model interaction and prediction. This allows users to input laptop features and receive predicted prices.
+
+**Exploratory Data Analysis (EDA):** EDA was conducted to gain insights into the data, identify relationships between variables, and inform feature engineering decisions. Correlation analysis, hypothesis testing (ANOVA and Pearson's), and visualizations like heatmaps and box plots were used. Also, **Evidently AI** were used for the data drift detection.
+
+**Feature Engineering:** New features were created, and existing ones were transformed to improve model accuracy. For example, less frequent laptop brands were grouped into an 'other' category, and numerical features were scaled using PowerTransformer and StandardScaler to improve model performance.
+
+**Model Selection and Training:** Various regression models were evaluated, including Decision Tree, Random Forest, Gradient Boosting, Linear Regression, XGBoost, CatBoost, AdaBoost, Ridge, Lasso, and KNN Regressor. CatBoost was identified as the best-performing model based on R2 score and other evaluation metrics.
+
+**Hyperparameter Tuning:** RandomizedSearchCV was used to fine-tune the hyperparameters of the selected models (CatBoost, XGBoost, Gradient Boosting, Ridge, Lasso) to further enhance performance.
+
+**Model Evaluation:** The final model's performance was assessed using metrics such as R2 score, Mean Absolute Error (MAE), and Root Mean Squared Error (RMSE) on a held-out test set. Here, parameter tuning continued inside the modular coding with **MLFLOW** leading to identifying the best performing model (in this case, CatBoostRegressor) and retraining the model.
+
+**Data Storage:** The cleaned dataset from notebook experiments was stored in a MongoDB database for persistence and potential future use. The final trained model was stored in an **AWS S3 bucket** for deployment. This enables efficient access and integration with other applications or services.
+
+**CI/CD with GitHub Actions:** A CI/CD pipeline was implemented using **GitHub Actions** to automate the build, testing, and deployment processes. This ensures code quality, facilitates collaboration, and enables continuous integration of new features and updates.
+
+**User Interface with Flask:** A user-friendly interface was developed using Flask to facilitate model interaction and prediction. This allows users to input laptop features and receive predicted prices.
 
 The project successfully developed a robust and accurate laptop price prediction model. This model can be used by consumers to estimate laptop prices, make informed purchasing decisions, and potentially by businesses for pricing strategies.
 
@@ -179,34 +179,36 @@ dvc repro
 4. Create EC2 machine (Ubuntu)
 5. Open EC2 and Install docker in EC2 Machine:
 ### Commands
+**Optional**
 ```
-#optinal
-
 sudo apt-get update -y
 
 sudo apt-get upgrade
+```
 
-#required
-
+**Required**
+```
 curl -fsSL https://get.docker.com -o get-docker.sh
-
+```
+```
 sudo sh get-docker.sh
-
+```
+```
 sudo usermod -aG docker ubuntu
-
+```
+```
 newgrp docker
 ```
 6. Configure EC2 as self-hosted runner
 7. Setup github secrets
 
-
 ## Training Link:
 ```
-http://16.170.247.15:8080/train
+http://51.20.190.33:8080/train
 ```
 ## Production Link:
 ```
-http://16.170.247.15:8080
+http://51.20.190.33:8080
 ```
 
 

@@ -94,7 +94,7 @@ async def predictRouteClient(request: Request):
 
         return templates.TemplateResponse(
             "laptop.html",
-            {"request": request, "context": value},
+            {"request": request, "context": round(value, 2)},
         )
         
     except Exception as e:
