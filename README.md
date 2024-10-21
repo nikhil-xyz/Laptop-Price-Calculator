@@ -86,9 +86,9 @@ records = collection.find()
 ## Evidently
 Evidently AI is an open-source Python library used for machine learning model monitoring and data drift detection. It helps to analyze and understand the behavior of machine learning models. It provides interactive reports and dashboards to visualize data and model metrics, such as data drift, model performance, and feature importance. It also allows you to create test suites to check data and model quality, and it can be integrated into ML pipelines.
 
-![drift](https://github.com/nikhil-xyz/Laptop-Price-Calculator/blob/main/flowchart/drift.png?raw=true)
+![drift](https://github.com/nikhil-xyz/Laptop-Price-Calculator/blob/main/flowchart/drift.png?raw=true) 
 
-drift_report : https://nikhil-xyz.github.io/Laptop-Price-Calculator/data_drift_report.html
+<!--- drift_report : https://nikhil-xyz.github.io/Laptop-Price-Calculator/data_drift_report.html --->
 
 
 
