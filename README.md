@@ -88,6 +88,8 @@ Evidently AI is an open-source Python library used for machine learning model mo
 
 ![drift](https://github.com/nikhil-xyz/Laptop-Price-Calculator/blob/main/flowchart/drift.png?raw=true)
 
+drift_report : https://nikhil-xyz.github.io/Laptop-Price-Calculator/data_drift_report.html
+
 
 
 ## Dagshub
