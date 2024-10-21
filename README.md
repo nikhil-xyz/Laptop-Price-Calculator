@@ -1,8 +1,12 @@
 # Laptop-Price-Calculator
 
+## Overview
+
 Laptop price prediction utilizes machine learning to forecast the price of a laptop based on its specifications such as brand, processor, RAM, storage, display, and other relevant features. This project involves data collection, preprocessing, feature engineering, model training, and evaluation to build a predictive model. The goal is to create a system that can accurately estimate laptop prices, helping both buyers and sellers make informed decisions. It can be beneficial to customers looking for the best deals and to businesses for pricing strategies. By leveraging data analysis and machine learning algorithms, this project aims to provide a valuable tool for navigating the laptop market.
 
 ## Tools
+![tools](https://github.com/nikhil-xyz/Laptop-Price-Calculator/blob/834f24effdce2036247e0a3c177ba758f2f8fe55/flowchart/project_flowchart.png)
+
 - Anaconda: https://www.anaconda.com/
 - Vs code: https://code.visualstudio.com/download
 - Git: https://git-scm.com/
