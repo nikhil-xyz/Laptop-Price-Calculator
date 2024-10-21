@@ -140,7 +140,7 @@ dvc repro
 ```
 
 ## Evaluation
-![scatter](flowchart\scatter_plot.png)
+![scatter](https://github.com/nikhil-xyz/Laptop-Price-Calculator/blob/main/flowchart/scatter_plot.png?raw=true)
 
 
 ## AWS CI-CD Setup with Github Actions
