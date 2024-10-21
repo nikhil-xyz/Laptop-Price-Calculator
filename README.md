@@ -109,7 +109,7 @@ with mlflow.start_run():
 ```
 
 ## Experiment Tracking 
-![mlflow](flowchart\mlflow_laptop.png)
+![mlflow]([flowchart\mlflow_laptop.png](https://github.com/nikhil-xyz/Laptop-Price-Calculator/blob/main/flowchart/mlflow_laptop.png))
 
 ### mlflow URI
 project_mlflow_uri = https://dagshub.com/nikhil.sonkusare94/Laptop-Price-Calculator
