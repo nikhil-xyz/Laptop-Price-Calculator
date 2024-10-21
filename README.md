@@ -4,6 +4,26 @@
 
 Laptop price prediction utilizes machine learning to forecast the price of a laptop based on its specifications such as brand, processor, RAM, storage, display, and other relevant features. This project involves data collection, preprocessing, feature engineering, model training, and evaluation to build a predictive model. The goal is to create a system that can accurately estimate laptop prices, helping both buyers and sellers make informed decisions. It can be beneficial to customers looking for the best deals and to businesses for pricing strategies. By leveraging data analysis and machine learning algorithms, this project aims to provide a valuable tool for navigating the laptop market.
 
+## Project Summary
+
+This project aims to develop a machine learning model for predicting laptop prices based on features like brand, CPU, screen size, RAM, graphics, and disk size. The project involves the following key steps:
+
+### Data Collection and Preprocessing: 
+Data was collected, cleaned, and preprocessed to handle missing values, outliers, and inconsistencies. Numerical features (screen size, RAM, disk size) were transformed using the Yeo-Johnson method to make their distributions more Gaussian-like. Categorical features (brand, CPU model, graphics) were one-hot encoded for model compatibility.
+### Exploratory Data Analysis (EDA): 
+EDA was conducted to gain insights into the data, identify relationships between variables, and inform feature engineering decisions. Correlation analysis, hypothesis testing (ANOVA and Pearson's), and visualizations like heatmaps and box plots were used.
+### Feature Engineering: 
+New features were created, and existing ones were transformed to improve model accuracy. For example, less frequent laptop brands were grouped into an 'other' category, and numerical features were scaled using PowerTransformer and StandardScaler to improve model performance.
+### Model Selection and Training: 
+Various regression models were evaluated, including Decision Tree, Random Forest, Gradient Boosting, Linear Regression, XGBoost, CatBoost, AdaBoost, Ridge, Lasso, and KNN Regressor. CatBoost was identified as the best-performing model based on R2 score and other evaluation metrics.
+### Hyperparameter Tuning: 
+RandomizedSearchCV was used to fine-tune the hyperparameters of the selected models (CatBoost, XGBoost, Gradient Boosting, Ridge, Lasso) to further enhance performance.
+### Model Evaluation: 
+The final model's performance was assessed using metrics such as R2 score, Mean Absolute Error (MAE), and Root Mean Squared Error (RMSE) on a held-out test set.
+### Data Storage: 
+The final preprocessed dataset was stored in a MongoDB database for persistence and potential future use.
+The project successfully developed a robust and accurate laptop price prediction model. This model can be used by consumers to estimate laptop prices, make informed purchasing decisions, and potentially by businesses for pricing strategies.
+
 ## Tools
 ![tools](flowchart/logos.png)
 
