@@ -5,7 +5,7 @@
 Laptop price prediction utilizes machine learning to forecast the price of a laptop based on its specifications such as brand, processor, RAM, storage, display, and other relevant features. This project involves data collection, preprocessing, feature engineering, model training, and evaluation to build a predictive model. The goal is to create a system that can accurately estimate laptop prices, helping both buyers and sellers make informed decisions. It can be beneficial to customers looking for the best deals and to businesses for pricing strategies. By leveraging data analysis and machine learning algorithms, this project aims to provide a valuable tool for navigating the laptop market.
 
 ## Tools
-![tools](https://github.com/nikhil-xyz/Laptop-Price-Calculator/blob/834f24effdce2036247e0a3c177ba758f2f8fe55/flowchart/project_flowchart.png)
+![tools](flowchart/logos.png)
 
 - Anaconda: https://www.anaconda.com/
 - Vs code: https://code.visualstudio.com/download
@@ -17,6 +17,7 @@ Laptop price prediction utilizes machine learning to forecast the price of a lap
 - Dagshub : https://dagshub.com/
 - Whimsical : https://whimsical.com/
 - MongoDB: https://account.mongodb.com/account/login
+- AWS: https://aws.amazon.com
 - Data link: https://raw.githubusercontent.com/nikhil-xyz/datasets/refs/heads/main/laptop_uncleaned.csv
 
 ## Project Flowchart
@@ -101,6 +102,9 @@ with mlflow.start_run():
 ```
 
 ## Experiment Tracking 
+![mlflow](flowchart\mlflow_laptop.png)
+
+### mlflow URI
 project_mlflow_uri = https://dagshub.com/nikhil.sonkusare94/Laptop-Price-Calculator
 
 ## DVC Tracking
@@ -127,6 +131,9 @@ stages:
 ```
 dvc repro
 ```
+
+## Evaluation
+![scatter](flowchart\scatter_plot.png)
 
 
 ## AWS CI-CD Setup with Github Actions
