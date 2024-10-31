@@ -138,6 +138,7 @@ with mlflow.start_run():
 
 ### mlflow URI
 Visit this url to compare all the experiment conducted during the evaluation by yourself.
+
 project_mlflow_uri = https://dagshub.com/nikhil.sonkusare94/Laptop-Price-Calculator
 
 ## DVC Tracking
