@@ -60,7 +60,7 @@ async def index(request: Request):
 @app.get("/train")
 async def trainRouteClient():
     try:
-        os.system("python laptop_project\pipeline\model_pusher_pipeline.py")
+        os.system("python main.py")
         
         #   For executing dvc pipeline
         #   os.system("dvc repro")

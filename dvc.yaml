@@ -13,6 +13,8 @@ stages:
     cmd: python laptop_project/pipeline/data_validation_pipeline.py
     deps:
       - laptop_project/pipeline/data_validation_pipeline.py
+      - artifact/data_ingestion/ingested/train.csv
+      - artifact/data_ingestion/ingested/test.csv
     outs:
       - artifact/data_validation/drift_report/report.yaml
       
@@ -21,6 +23,7 @@ stages:
     cmd: python laptop_project/pipeline/data_transformation_pipeline.py
     deps:
       - laptop_project/pipeline/data_transformation_pipeline.py
+      - artifact/data_validation/drift_report/report.yaml
     outs:
       - artifact/data_transformation/transformed/train.npy
       - artifact/data_transformation/transformed/test.npy
@@ -30,6 +33,9 @@ stages:
     cmd: python laptop_project/pipeline/model_trainer_pipeline.py
     deps:
       - laptop_project/pipeline/model_trainer_pipeline.py
+      - artifact/data_transformation/transformed/train.npy
+      - artifact/data_transformation/transformed/test.npy
+      - artifact/data_transformation/transformed_object/preprocessing.pkl
     outs:
       - artifact/model_trainer/trained_model/model.pkl
 
@@ -37,9 +43,13 @@ stages:
     cmd: python laptop_project/pipeline/model_evaluation_pipeline.py
     deps:
       - laptop_project/pipeline/model_evaluation_pipeline.py
+      - artifact/model_trainer/trained_model/model.pkl
+      - artifact/data_transformation/transformed_object/preprocessing.pkl
     
   model_pusher:
     cmd: python laptop_project/pipeline/model_pusher_pipeline.py
     deps:
       - laptop_project/pipeline/model_pusher_pipeline.py
+      - artifact/model_trainer/trained_model/model.pkl
+      - artifact/data_transformation/transformed_object/preprocessing.pkl
   

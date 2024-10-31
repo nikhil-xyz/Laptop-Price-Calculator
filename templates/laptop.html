@@ -4,23 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Laptop Price Prediction</title>
-    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css')}}">
+    <link rel="stylesheet" href="static/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   </head>
   <body>
     <nav class="navbar navbar-light bg-light static-top">
         <div class="container-fluid">
-           <!-- <a class="navbar-brand" href="https://ineuron.ai"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIkAAAAlCAMAAABBJDpuAAAAVFBMVEX/fgD/iQA7NzIyMjMnNYInNYEnNYInNYEzMzInNYQnNYETJzsnNYIwN1wxMjNoTis4O1YrNm0xOF47PE9DP0dEQEVpTVkAJJ4nNYEOLJHJbiAzMzOmmmHRAAAAFnRSTlOh/vu+986oen9fP2UqEzQkFAIDAAEEILVBJQAAA3FJREFUWMPNmO2WoyAMQG0VBARtdVRs3/89NwkgaF1rd2aOm18tIrnkgwSz7n+R7LcV1ELkeS7E7VySRlyfQXJhTiO55c+liP4cEuH1X8E7gaV+S3Jv2zYZ/Vr+/Sdx2vP6doc/fSPcf/GOpLSFVXFUW8t+giRP47TOd60yk1hbxIhSP0ACKPWrvw7YBIT/lcQY84G3Wk17ugWQfg5UsQJpjflKSLQi7xTWyk0SXTJ4VnB5D1yccxmp4Z+mX5KGNS+SPXVNll0ulyxL0wYmloBB6zL/MpCoAgjAJiUM6w0SboMwPUdRogvNKcNM3smFdRvEcJJkKcflQa+X0pNIfBGW0zKqjyQtw4VLKQlI7ZLgdrRNSZDjMQx2GB4pCkxkCrfGWUTJ0Egan6muCHgJCUwtnCk0mrJ9Q8K5LUqtdSfynkAedhynaRqngVDaXLiJEAzkFkM71IuIlWRYtSQpbXSZDvQ7JPCei9brs+oaABkn74LRIkpFaVxGnzjvIxTYREOoEwn5r01JTDRTcO87Eu3zNUeTPKZpjrIRrNIDCjzALbPk7LJMIokOEQu2K7yKQAKvFDF9pVe0R+LGb7h1MMkw2ijjA/1zhSfSphvEAChXJEhAqwYStIJWXnTpvbdH4hTUwSQ2JRmQpILDLYbB7J41SYiLcNozu5Z3JMo7RxBJahI7WSRByCMkqJt9hySESbVJcvmARJGFExJmdBSl2oM2+T4JLWfgaGFptizlPUm1FydHSdyZ7UnS4ySph2kS0kJrkvr5NJg7dnrJnfxgxPozRPGtkyPNOxtaiDvbIAF9L+5B5zTI2BwlwXmM+U3zReav3o0F8oUEFFZ42McDZYomOUziFmezgWyo251Uc1nyKJol7URCEvIYUEbHYaEGQi9C9egwCdVfHwiaajfjKMUcHcRacCylhWJbJDfq47EEDhYqoIWjHnwDXZPpPiChPQelLU+Cbm4w50FmYgkvFwpiWwCC/Um/SLcNElOC9RVj6qWpCiEMvRUK4zLpdKmPw8rVldy/qxjn60wLrVLWJIPLiZJRr3fsvnOHPvare+lB93tb37T20D82jqOt+zNuXhuNvNhp7X+PpHb3rvV9R5xjE2SpyCN9ffQO+GtWIZr5Xnytz4gTMIRYfys47/uJEXny/aQ/95tSUwmU+uRvSp/IHzQqZYpYrQmxAAAAAElFTkSuQmCC" /></a> -->
         </div>
      </nav>
     <section>
         <div class="container-fluid">
             <div class="container">
                 <form action="/" method="post">
-                    <legend>Laptop Configuration and Expected Price</legend>
+                    <legend><h2><center><u>Laptop Configuration and Expected Price</u></center></h2></legend>
+                    <br></br>
                     <div class="mb-3">
-                        <label for="Brand" >Brand</label>
-                        <select class="form-control" id="Brand" name="Brand" placeholder="Brand" required="required">
+                        <label for="Brand"><b>Brand</b></label>
+                        <select class="form-control" id="Brand" name="Brand" placeholder="Brand" required="required" >
                           <option value="" disabled selected>Select Brand</option>
                           <option>hp</option>
                           <option>samsung</option>
@@ -40,12 +40,12 @@
 
 
                     <div class="mb-3">
-                      <label for="Screen_Size">Screen Size</label>
+                      <label for="Screen_Size"><b>Screen Size</b></label>
                       <input type="number" class="form-control" id="Screen_Size" name="Screen_Size" min="10" max="20" placeholder="select between 10 to 20" required="required" step="any">
                     </div>
         
                     <div class="mb-3">
-                      <label for="CPU_Model">CPU Model</label>
+                      <label for="CPU_Model"><b>CPU Model</b></label>
                       <select class="form-control" id="CPU_Model" name="CPU_Model" placeholder="CPU Model" required="required">
                           <option value="" disabled selected>Select CPU Model</option>
                           <option>i3</option>
@@ -64,13 +64,13 @@
                     </div>
         
                     <div class="mb-3">
-                      <label for="Ram">Ram</label>
+                      <label for="Ram"><b>Ram</b></label>
                       <input type="number" class="form-control" id="Ram" name="Ram" min="2" max="64" placeholder="select between 2 to 64" required="required">
                     </div>
 
 
                     <div class="mb-3">
-                      <label for="Graphics">Select Graphics</label>
+                      <label for="Graphics"><b>Select Graphics</b></label>
                       <select class="form-control" id="Graphics" name="Graphics" placeholder="Graphics" required="required">
                         <option value="" disabled selected>Graphics</option>
                         <option>amd</option>
@@ -82,7 +82,7 @@
 
 
                     <div class="mb-3">
-                      <label for="Disk_Size">Disk Size</label>
+                      <label for="Disk_Size"><b>Disk Size</b></label>
                       <input type="number" class="form-control" id="Disk_Size" name="Disk_Size" min="4" max="4096" placeholder="select between 4 to 4096" required="required">
                     </div>
 
@@ -91,7 +91,7 @@
                 </form>
             </div>
             <div class="text-center text-black">
-                <h2 class="display-4 fw-bolder">Laptop Price: Rs. {{context}} </h2>
+                <h3 class="display-4 fw-bolder">Laptop Price: Rs. {{context}} </h3>
             </div>
         </div>
     </section>
