@@ -163,10 +163,15 @@ stages:
       - <metrics_file.json:metric_name>
       - <another_metrics_file:another_metric>
 ```
-### DVC command for pipeline execution
+### DVC command for pipeline execution and workflow
 ```
 dvc repro
 ```
+```
+dvc dag
+```
+### DVC Workflow
+![dvc](https://github.com/nikhil-xyz/Laptop-Price-Calculator/blob/main/flowchart/Screenshot%20(22).png)
 
 ## Evaluation
 ![scatter](https://github.com/nikhil-xyz/Laptop-Price-Calculator/blob/main/flowchart/scatter_plot.png?raw=true)
