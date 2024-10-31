@@ -161,11 +161,12 @@ stages:
       - <metrics_file.json:metric_name>
       - <another_metrics_file:another_metric>
 ```
-### DVC command for pipeline execution and workflow
+### DVC command for pipeline execution and workflow display
 ```
+# For pipeline execution
 dvc repro
-```
-```
+
+# For workflow display
 dvc dag
 ```
 ### DVC Workflow
