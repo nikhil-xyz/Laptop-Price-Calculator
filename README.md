@@ -54,19 +54,15 @@ The project successfully developed a robust and accurate laptop price prediction
 ## Git Commands
 ```
 git add .
-
 git commit -m "message"
-
 git push origin main
 ```
 
 ## Conda environment commands
 ```
-conda create -n visa python=3.8 -y
-
-conda activate visa
-
-pip install -r requirements.txt
+conda create -n <environament_name> python=<version> -y
+conda activate <environament_name>
+conda deactivate
 ```
 
 ## Environment Variables
@@ -141,6 +137,7 @@ with mlflow.start_run():
 ![mlflow](https://github.com/nikhil-xyz/Laptop-Price-Calculator/blob/main/flowchart/mlflow_laptop.png?raw=true)
 
 ### mlflow URI
+Visit this url to compare all the experiment conducted during the evaluation by yourself.
 project_mlflow_uri = https://dagshub.com/nikhil.sonkusare94/Laptop-Price-Calculator
 
 ## DVC Tracking
@@ -174,6 +171,8 @@ dvc dag
 ![dvc](https://github.com/nikhil-xyz/Laptop-Price-Calculator/blob/main/flowchart/Screenshot%20(22).png)
 
 ## Evaluation
+**Scatter Plot:** A scatter plot is a type of graph that uses dots to represent values for two different numeric variables. The position of each dot on the horizontal and vertical axis indicates values for an individual data point. We are plotting to compare the actual output against the predicted outputs.
+
 ![scatter](https://github.com/nikhil-xyz/Laptop-Price-Calculator/blob/main/flowchart/scatter_plot.png?raw=true)
 
 
